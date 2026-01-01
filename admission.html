@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission - Kongu Matriculation School</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-info">
+            <span><i class="fas fa-phone"></i> +91 96006 26655, 94877 45932</span>
+            <span><i class="fas fa-envelope"></i> kongumatricpup@gmail.com</span>
+        </div>
+        <div class="top-bar-social">
+            <a href="https://www.instagram.com/kongu_matriculation_school?igsh=MXN6Z3NmZnA3dTE4Mw==" target="_blank"><i
+                    class="fab fa-instagram"></i></a>
+            <a href="admission.html" class="top-bar-btn">Apply Now</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo-container">
+            <img src="KONGU SCHOOL LOGO WORKING FILE_page-0001.jpg" alt="Kongu School Logo">
+            <div class="school-info">
+                <h1>KONGU MATRICULATION SCHOOL</h1>
+                <p>LEARN | GROW | LEAD</p>
+            </div>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="admission.html" class="active">Admission</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="hero-text reveal reveal-bottom">
+            <h1 class="text-shimmer-white">Admissions</h1>
+            <p>Begin Your Child's Journey with Us</p>
+        </div>
+    </section>
+
+    <!-- Admission Content -->
+    <section class="admission-details">
+        <div style="max-width: 800px; margin: 0 auto;" class="reveal reveal-bottom">
+            <h2 class="text-shimmer" style="color: var(--primary); margin-bottom: 25px; text-align: center;">Enrollment
+                Process</h2>
+            <p style="margin-bottom: 30px; text-align: center;">We welcome applications from students of all backgrounds
+                who are eager to learn and grow in a nurturing environment.</p>
+
+            <div
+                style="background: white; padding: 40px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 20px; display: flex; gap: 20px;">
+                        <span
+                            style="background: var(--accent); color: var(--primary); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">1</span>
+                        <div>
+                            <h4 style="color: var(--primary);">Application Form</h4>
+                            <p>Collect and submit the completed application form from the school office.</p>
+                        </div>
+                    </li>
+                    <li style="margin-bottom: 20px; display: flex; gap: 20px;">
+                        <span
+                            style="background: var(--accent); color: var(--primary); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">2</span>
+                        <div>
+                            <h4 style="color: var(--primary);">Interactive Session</h4>
+                            <p>An informal session with the student and parents will be scheduled.</p>
+                        </div>
+                    </li>
+                    <li style="display: flex; gap: 20px;">
+                        <span
+                            style="background: var(--accent); color: var(--primary); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">3</span>
+                        <div>
+                            <h4 style="color: var(--primary);">Final Admission</h4>
+                            <p>Confirmation and fee payment to secure the admission.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gp-footer">
+        <div class="footer-grid">
+            <div class="footer-col reveal reveal-left delay-1">
+                <img src="KONGU SCHOOL LOGO WORKING FILE_page-0001.jpg" alt="Logo"
+                    style="height: 60px; margin-bottom: 20px;">
+                <p>Kongu Matriculation School is a premier educational institution in Tiruppur, dedicated to excellence
+                    in education and character building.</p>
+            </div>
+            <div class="footer-col reveal reveal-bottom delay-2">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="academics.html">Curriculum</a></li>
+                    <li><a href="admission.html">Admissions</a></li>
+                </ul>
+            </div>
+            <div class="footer-col reveal reveal-right delay-3">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Pudhupalayam, Nachipalayam (Post), Tirupur - 641606</p>
+                <p><i class="fas fa-phone-alt"></i> +91 96006 26655, 94877 45932</p>
+                <p><i class="fas fa-envelope"></i> kongumatricpup@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Kongu Matriculation School. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', reveal);
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal');
+            for (var i = 0; i < reveals.length; i++) {
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 150;
+                if (revealtop < windowheight - revealpoint) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+        reveal();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Kongu Matriculation School</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-info">
+            <span><i class="fas fa-phone"></i> +91 96006 26655, 94877 45932</span>
+            <span><i class="fas fa-envelope"></i> kongumatricpup@gmail.com</span>
+        </div>
+        <div class="top-bar-social">
+            <a href="https://www.instagram.com/kongu_matriculation_school?igsh=MXN6Z3NmZnA3dTE4Mw==" target="_blank"><i
+                    class="fab fa-instagram"></i></a>
+            <a href="admission.html" class="top-bar-btn">Apply Now</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo-container">
+            <img src="KONGU SCHOOL LOGO WORKING FILE_page-0001.jpg" alt="Kongu School Logo">
+            <div class="school-info">
+                <h1>KONGU MATRICULATION SCHOOL</h1>
+                <p>LEARN | GROW | LEAD</p>
+            </div>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="admission.html">Admission</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="hero-text reveal reveal-bottom">
+            <h1 class="text-shimmer-white">About Our School</h1>
+            <p>A Heritage of Excellence in Education</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-details">
+        <div style="display: flex; gap: 50px; align-items: center; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 300px;" class="reveal reveal-left">
+                <h2 class="text-shimmer" style="color: var(--primary); margin-bottom: 20px;">Our Journey</h2>
+                <p style="margin-bottom: 20px;">Kongu Matriculation School, Tiruppur, has been a beacon of knowledge
+                    since its inception. We are committed to fostering an environment where students are encouraged to
+                    dream big and achieve even bigger.</p>
+                <p>Our curriculum is designed to balance academic rigor with character development, ensuring our
+                    students are prepared for the challenges of the 21st century.</p>
+            </div>
+            <div style="flex: 1; min-width: 300px;">
+                <video id="aboutVideo" autoplay muted loop playsinline poster="school-building.png"
+                    style="width: 100%; height: 500px; border-radius: 10px; box-shadow: var(--shadow); display: block; object-fit: cover;">
+                    <source src="school video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gp-footer">
+        <div class="footer-grid">
+            <div class="footer-col reveal reveal-left delay-1">
+                <img src="KONGU SCHOOL LOGO WORKING FILE_page-0001.jpg" alt="Logo"
+                    style="height: 60px; margin-bottom: 20px;">
+                <p>Kongu Matriculation School is a premier educational institution in Tiruppur, dedicated to excellence
+                    in education and character building.</p>
+            </div>
+            <div class="footer-col reveal reveal-bottom delay-2">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="academics.html">Curriculum</a></li>
+                    <li><a href="admission.html">Admissions</a></li>
+                </ul>
+            </div>
+            <div class="footer-col reveal reveal-right delay-3">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Pudhupalayam, Nachipalayam (Post), Tirupur - 641606</p>
+                <p><i class="fas fa-phone-alt"></i> +91 96006 26655, 94877 45932</p>
+                <p><i class="fas fa-envelope"></i> kongumatricpup@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Kongu Matriculation School. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', reveal);
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal');
+            for (var i = 0; i < reveals.length; i++) {
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 150;
+                if (revealtop < windowheight - revealpoint) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+        reveal();
+
+        // Ensure video plays
+        document.addEventListener('DOMContentLoaded', function () {
+            var video = document.getElementById('aboutVideo');
+            if (video) {
+                video.play().catch(function (error) {
+                    console.log("Video play failed:", error);
+                });
+            }
+        });
+    </script>
+
+</body>
+
+</html>
