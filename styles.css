@@ -179,6 +179,16 @@ h3,
     display: inline-block;
 }
 
+.text-shimmer-gold {
+    background: linear-gradient(90deg, #ffd700 0%, #f1c40f 50%, #ffd700 100%);
+    background-size: 200% auto;
+    color: transparent !important;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: text-shimmer 5s linear infinite;
+    display: inline-block;
+}
+
 /* Top Bar */
 .top-bar {
     background: var(--secondary);
