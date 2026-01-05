@@ -247,9 +247,28 @@ h3,
 /* Hamburguer Menu Icon */
 .mobile-menu-btn {
     display: none;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: var(--primary);
     cursor: pointer;
+    width: 45px;
+    height: 45px;
+    background: var(--light-grey);
+    border-radius: 50%;
+    display: none;
+    /* Controlled by media query */
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.mobile-menu-btn:hover {
+    background: var(--accent);
+    transform: scale(1.1);
+}
+
+.mobile-menu-btn:active {
+    transform: scale(0.95);
 }
 
 .nav-links a {
@@ -563,29 +582,24 @@ section:hover .section-header .underline {
 }
 
 @media (max-width: 768px) {
-    .top-bar-info {
-        display: none;
-    }
-
-    .top-bar {
-        padding: 5px 5%;
-        justify-content: flex-end;
-    }
-
     .header {
-        top: 35px;
+        top: 0;
+        padding: 10px 5%;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     }
 
     .mobile-menu-btn {
-        display: block;
+        display: flex;
+        /* Show as flex to use centering */
     }
 
     .nav-links {
         position: fixed;
-        top: 100px;
+        top: 80px;
+        /* Aligned with optimized header height */
         right: -100%;
         width: 100%;
-        height: calc(100vh - 100px);
+        height: calc(100vh - 80px);
         background: white;
         flex-direction: column;
         align-items: center;
@@ -617,7 +631,8 @@ section:hover .section-header .underline {
 
     .gp-hero {
         height: 70vh;
-        padding-top: 100px;
+        padding-top: 80px;
+        /* Reduced since top bar is gone and header is fixed at 0 */
     }
 
     .footer-grid {
