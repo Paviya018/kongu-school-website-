@@ -304,6 +304,14 @@ h3,
     list-style: none;
 }
 
+/* Hamburguer Menu Icon */
+.mobile-menu-btn {
+    display: none;
+    font-size: 1.5rem;
+    color: var(--primary);
+    cursor: pointer;
+}
+
 .nav-links a {
     text-decoration: none;
     color: var(--primary);
@@ -597,6 +605,116 @@ section:hover .section-header .underline {
 .delay-3 {
     transition-delay: 0.3s;
 }
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    :root {
+        --section-padding: 60px 5%;
+    }
+
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+
+    .header {
+        padding: 10px 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-bar-info {
+        display: none;
+    }
+
+    .top-bar {
+        padding: 5px 5%;
+        justify-content: flex-end;
+    }
+
+    .header {
+        top: 35px;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 100px;
+        right: -100%;
+        width: 100%;
+        height: calc(100vh - 100px);
+        background: white;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s;
+        z-index: 999;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-text p {
+        font-size: 1.1rem;
+    }
+
+    .gp-hero {
+        height: 70vh;
+        padding-top: 100px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome video {
+        height: 300px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .school-info h1 {
+        font-size: 1.1rem;
+    }
+
+    .school-info p {
+        font-size: 0.7rem;
+    }
+
+    .logo-container img {
+        height: 45px;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .btn-primary {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+}
+
 
 .delay-4 {
     transition-delay: 0.4s;

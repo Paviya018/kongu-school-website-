@@ -1,11 +1,24 @@
-// Sidebar Logic
-const menuBtn = document.getElementById('menuBtn');
-const sidebar = document.getElementById('sidebar');
-const closeBtn = document.getElementById('closeBtn');
+// Mobile Menu Toggle
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const navLinks = document.querySelector('.nav-links');
 
-if (menuBtn && sidebar && closeBtn) {
-    menuBtn.addEventListener('click', () => { sidebar.classList.add('active'); });
-    closeBtn.addEventListener('click', () => { sidebar.classList.remove('active'); });
+if (mobileMenuBtn && navLinks) {
+    mobileMenuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        const icon = mobileMenuBtn.querySelector('i');
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-times');
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.add('fa-bars');
+            icon.classList.remove('fa-times');
+        });
+    });
 }
 
 // Header Scroll Effect
