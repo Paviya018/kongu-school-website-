@@ -1,25 +1,49 @@
-// Mobile Menu Toggle
-const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-const navLinks = document.querySelector('.nav-links');
+// Mobile Menu Toggle - Enhanced for Mobile Devices
+document.addEventListener('DOMContentLoaded', function () {
+    console.log('Script loaded!'); // Debug log
 
-if (mobileMenuBtn && navLinks) {
-    mobileMenuBtn.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        const icon = mobileMenuBtn.querySelector('i');
-        icon.classList.toggle('fa-bars');
-        icon.classList.toggle('fa-times');
-    });
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
 
-    // Close menu when clicking a link
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
+    console.log('Mobile menu button:', mobileMenuBtn); // Debug log
+    console.log('Nav links:', navLinks); // Debug log
+
+    if (mobileMenuBtn && navLinks) {
+        // Use both click and touchstart for better mobile support
+        const toggleMenu = function (e) {
+            e.preventDefault(); // Prevent default behavior
+            console.log('Menu toggled!'); // Debug log
+            navLinks.classList.toggle('active');
+
             const icon = mobileMenuBtn.querySelector('i');
-            icon.classList.add('fa-bars');
-            icon.classList.remove('fa-times');
+            if (icon) {
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            }
+        };
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+        mobileMenuBtn.addEventListener('touchstart', toggleMenu, { passive: false });
+
+        // Close menu when clicking a link
+        const menuLinks = document.querySelectorAll('.nav-links a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                console.log('Link clicked, closing menu'); // Debug log
+                navLinks.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                if (icon) {
+                    icon.classList.add('fa-bars');
+                    icon.classList.remove('fa-times');
+                }
+            });
         });
-    });
-}
+
+        console.log('Mobile menu initialized successfully!'); // Debug log
+    } else {
+        console.error('Mobile menu elements not found!'); // Debug log
+    }
+});
 
 // Header Scroll Effect
 window.addEventListener('scroll', () => {
